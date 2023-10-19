@@ -1,0 +1,108 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Ubuntu", sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #e1e8ec !important;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.navbar {
+  height: 80px;
+  width: 100%;
+  background-color: #4c5175;
+  margin-bottom: 60%;
+  display: flex;
+}
+
+#logo {
+  margin-left: 1%;
+}
+
+#home {
+  margin-right: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid white;
+  outline: none;
+  background-color: #4c5175;
+}
+
+#home img {
+  filter: none;
+  margin: 11px 11px;
+  transition: filter 0.3s ease;
+}
+
+#home:hover img {
+  filter: invert();
+}
+
+#home:hover {
+  background-color: #444a74;
+}
+
+.center {
+  text-align: center;
+  font-family: "Ubuntu", sans-serif;
+  position: absolute;
+  top: 335px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.05);
+}
+
+.center h1 {
+  text-align: center;
+  padding: 20px 0px;
+  border-bottom: 1px solid silver;
+}
+
+.center form {
+  padding: 0 40px;
+  box-sizing: border-box;
+}
+
+#g_id_onload,
+#g_id_signin {
+  margin: 0 auto;
+  display: block;
+  text-align: center;
+}
+
+.center form {
+  padding: 0 40px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+#sign {
+  border: none;
+  color: white;
+  font-weight: 400;
+  border-radius: 20px;
+  padding: 10px 30px;
+  background: #4c5175;
+  transition: 0.2s;
+  margin-bottom: 35px;
+}
+
+#sign:hover {
+  background: #2691d9;
+  transition: 0.2s;
+}
+
+#sign img {
+  margin: 5px;
+  border-radius: 5px;
+}

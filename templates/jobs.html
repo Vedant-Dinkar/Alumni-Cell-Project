@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../static/jobs.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script> -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+    <section class="header">
+        <div class="container">
+            <!-- <button class="btn" id="btn1">LOG IN</button>
+            <button class="btn" id="btn2">JOIN IN</button> -->
+            <nav>
+                <a href="./"><img src="../static/logo/download.jpeg" alt=""></a>
+                <div class="navitems" id="navItems">
+                    <i class="fa fa-times" onclick="hideMenu()"></i>
+                    <ul>
+                        <li><a href="./">HOME</a></li>
+                        <li><a href="./#aboutus">ABOUT</a></li>
+                        <li><a href="./#gallerypic">GALLERY</a></li>
+                        <li><a href="./#contactpls">CONTACT</a></li>
+                    </ul>
+                </div>
+                <i class="fa fa-bars" onclick="showMenu()"></i>
+            </nav>
+        </div>
+        <script>
+            var navItems = document.getElementById("navItems");
+            function showMenu() {
+                navItems.style.right = "0";
+            }
+            function hideMenu() {
+                navItems.style.right = "-200px";
+            }
+        </script>
+
+        <div class="jh">Jobs</div>
+    </section>
+
+    <section class="ultrabox42">
+        <div class="box42">
+            <div class="sbox42">
+                <div class="smallbox42" id="jobsbox42">
+                    <img src="../static/graviton.png" alt="">
+                    <h4>Graviton Research Capital</h4>
+                </div>
+                <div class="smallbox42" id="jobsbox43">
+                    <li>Software Engineer</li>
+                    <li>Tech Stacks</li>
+                    <li>Description- Lorem ipsum dolor sit amet consectetur, </li>
+                    <li>Contact-xxxxxxxxxx</li>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>

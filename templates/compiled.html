@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome to Alumni Portal IITI!</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet">
+
+
+  <!-- <link rel="stylesheet" href="{{ url_for('static', filename='counter.css') }}">
+     <link rel="stylesheet" href="{{ url_for('static', filename='phone.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='GCF.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='features.css') }}"> -->
+
+  <link rel="stylesheet" href="../static/GCF.css">
+  <link rel="stylesheet" href="../static/counter.css">
+  <link rel="stylesheet" href="../static/features.css">
+  <link rel="stylesheet" href="../static/phone.css">
+
+
+  <!-- <script src="../counter.js"></script>
+    <script src="../features.js"></script> -->
+
+  <script>
+    // -------------------------------------------------------------------------------------------
+
+
+    // -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+    document.addEventListener("DOMContentLoaded", function () {
+      var w = window.innerWidth;
+      var h = window.innerHeight;
+
+      var featSection = document.querySelector('#cbs');
+      featSection.style.width = w + 'px';
+
+      var eatSection = document.querySelector('.ctrs');
+      eatSection.style.height = w * 151 / 1440 + 'px';
+      var listItems = document.querySelectorAll('.ctrs .nol');
+      var i1 = document.querySelector('.no1');
+      var i2 = document.querySelector('.no2');
+      var i3 = document.querySelector('.no3');
+      var x1 = 0;
+      var x2 = 0;
+      var x3 = 0;
+      var y1 = 0;
+      var y2 = 0;
+      var y3 = 0;
+      var startTime = null;
+
+      var observer = new IntersectionObserver(function (entries, observer) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            startTime = performance.now();
+            requestAnimationFrame(animateNumbers);
+          }
+        });
+      });
+
+      function animateNumbers(timestamp) {
+        if (y1 < 1200) {
+          if (!startTime) startTime = timestamp;
+          var progress = timestamp - startTime;
+          if (progress > 2000) progress = 2000;
+          var speedMultiplier = 1000;
+          x1 = progress * 1.2 * speedMultiplier / 1000;
+          x2 = progress * 4 * speedMultiplier / 1000;
+          x3 = progress * 0.05 * speedMultiplier / 1000;
+          y1 = Math.ceil(x1);
+          y2 = Math.ceil(x2);
+          y3 = Math.ceil(x3);
+
+          i1.textContent = y1 + '+';
+          i2.textContent = y2 + '+';
+          i3.textContent = y3 + '+';
+
+          if (progress < 2000) {
+            requestAnimationFrame(animateNumbers);
+          }
+        }
+        else {
+          i1.textContent = 1200 + '+';
+          i2.textContent = 4000 + '+';
+          i3.textContent = 50 + '+';
+        }
+      }
+
+
+      listItems.forEach(function (listItem) {
+        observer.observe(listItem);
+      });
+    });
+    // -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    document.addEventListener("DOMContentLoaded", function () {
+      var w = window.innerWidth;
+      var h = window.innerHeight;
+
+      var featSection = document.querySelector('.feat');
+      featSection.style.width = w + 'px';
+      featSection.style.height = h + 'px';
+
+      var desDiv = document.querySelector('#des');
+      desDiv.style.marginLeft = w * 0.65 + 'px';
+
+      var btn = document.querySelector('.btn');
+      var box = document.querySelector('.dabba');
+      var desHeading = document.querySelector('#des h1');
+      var desBj = document.querySelector('#des h3');
+
+      btn.addEventListener('click', function () {
+        this.classList.toggle('active');
+        box.classList.toggle('open');
+      });
+
+      var firstIcon = document.querySelector('.dabba i:nth-child(1)');
+      var secondIcon = document.querySelector('.dabba i:nth-child(2)');
+      var thirdIcon = document.querySelector('.dabba i:nth-child(3)');
+      var fourthIcon = document.querySelector('.dabba i:nth-child(4)');
+
+      var icons = document.querySelectorAll('.dabba i');
+
+      icons.forEach(function (icon, index) {
+        icon.addEventListener('mouseover', function () {
+          if (index == 0) {
+            desHeading.textContent = 'View your Friend';
+            desBj.textContent = "The seamless display allows the user to access every other alumni's profile!";
+          }
+          if (index == 1) {
+            desHeading.textContent = 'Chat with your Friend';
+            desBj.textContent = "With our fast data servers, you're free to chat with other alumni!";
+          }
+          if (index == 2) {
+            desHeading.textContent = 'Search for Alumni';
+            desBj.textContent = "The filtering feature allows you to find any alumni registered on our network!";
+          }
+          if (index == 3) {
+            desHeading.textContent = 'Job Opportunities';
+            desBj.textContent = "The portal allows you to stay connected to everyone and get job references easily!";
+          }
+        });
+
+        icon.addEventListener('mouseout', function () {
+          desHeading.textContent = 'Features';
+          desBj.textContent = "The alumni portal is equipped with various features! Click on the menu and hover to learn more.";
+        });
+      });
+    });
+
+
+
+
+  </script>
+</head>
+
+<body>
+  <section class="header">
+    <div class="containers">
+      <button class="btnreal" id="btnreal1">
+        <a href="./sign.html"
+          style="outline: none !important; text-decoration: none !important; color: white; font-weight: 400;">Join
+          Us</a>
+      </button>
+
+      <button class="btnreal" id="btnreal2">
+        <a href="./log" style="text-decoration: none !important; color: white; font-weight: 400;">Log In</a>
+      </button>
+
+      <nav>
+        <a href="#"><img src="../static/logo/download.jpeg" alt=""></a>
+        <div class="navitems" id="navItems">
+          <i class="fa fa-times" onclick="hideMenu()"></i>
+          <ul>
+            <li><a href="">HOME</a></li>
+            <li><a href="#aboutus">ABOUT</a></li>
+            <li><a href="#gallerypic">GALLERY</a></li>
+            <li><a href="#contactpls">CONTACT</a></li>
+          </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+      </nav>
+    </div>
+
+    <div class="welcome">
+      <p>Welcome to IIT Indore's</p>
+      <p id="wel">Alumni Portal</p>
+    </div>
+  </section>
+
+  <script>var navItems = document.getElementById("navItems");
+    function showMenu() {
+      navItems.style.right = "0";
+    }
+    function hideMenu() {
+      navItems.style.right = "-200px";
+    }</script>
+
+  <br>
+  <br>
+
+  <section>
+    <div class="aboutus" id="aboutus">
+      <h5 class="center">About Us</h5>
+      <br>
+      <div class="aboutcontainer">
+        <div class="boxbox" id="box61"><img src="../static/about1.jpg" alt=""></div>
+        <div class="boxbox" id="box62">
+          <p>IIT Indore alumni form a vast and accomplished network spread across the globe. With a strong presence
+            worldwide, our alumni are making significant contributions in academia, research, industry,
+            entrepreneurship, and public service. Through events and programs, they actively engage with the institute,
+            sharing their knowledge and experiences. The alumni directory serves as a valuable resource, connecting
+            current students and fellow graduates. Inspiring stories of their achievements and success motivate the IIT
+            Indore community. Regular news updates keep everyone informed about the latest accomplishments and
+            initiatives of our esteemed alumni, further strengthening the bond between the institute and its graduates.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section>
+    <div class="eventscontainer" id="events33">
+      <div class="carton" id="carton1">
+        <h5>EVENTS</h5>
+      </div>
+      <div class="carton" id="carton2">
+        <!-- <img src="alumni/1.jpeg" alt=""> -->
+
+        <div id="carouselExampleDark" class="carousel carousel-dark slide">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
+              aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
+              aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
+              aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3"
+              aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="4"
+              aria-label="Slide 5"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="10000">
+              <img src="../static/alumni/1.jpeg " class="d-block w-100 sliderimg1 sliderimg" alt="...">
+              <div class="carousel-caption d-none d-md-block">
+                <h4 class="bold text-white">First slide label</h4>
+                <p class="text-white">Some representative placeholder content for the first slide.</p>
+              </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+              <img src="../static/alumni/2.jpeg " class="d-block w-100 sliderimg2 sliderimg" alt="...">
+              <div class="carousel-caption d-none d-md-block">
+                <h4 class="bold text-white">Second slide label</h4>
+                <p class="text-white">Some representative placeholder content for the second slide.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="../static/alumni/3.jpeg " class="d-block w-100 sliderimg3 sliderimg" alt="...">
+              <div class="carousel-caption d-none d-md-block">
+                <h4 class="bold text-white">Third slide label</h4>
+                <p class="text-white">Some representative placeholder content for the third slide.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="../static/alumni/4.jpg " class="d-block w-100 sliderimg4 sliderimg" alt="...">
+              <div class="carousel-caption d-none d-md-block">
+                <h4 class="bold text-white">Fourth slide label</h4>
+                <p class="text-white">Some representative placeholder content for the fourth slide.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="../static/alumni/5.jpg" class="d-block w-100 sliderimg5 sliderimg" alt="...">
+              <div class="carousel-caption d-none d-md-block">
+                <h4 class="bold text-white">Fifth slide label</h4>
+                <p class="text-white">Some representative placeholder content for the fifth slide.</p>
+              </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+    <span><a href="./events.html" class="va">View All</a></span>
+  </section>
+
+  <!-- 
+    <script>
+        var navItems=document.getElementById("navItems");
+        function showMenu(){
+            navItems.style.right="0";
+        }
+        function hideMenu(){
+            navItems.style.right="-200px";
+        }
+    </script> -->
+
+  <br>
+  <br>
+  <!-- -------------------------------------------------------------------------------------------------------------------  -->
+  <section class="ctr">
+    <img src='../static/CounterBooks.png' id="cbs">
+    <div class="ctrs">
+      <ul id='ula' style="list-style: none;">
+        <li>
+          STUDENTS
+        </li>
+        <li class="nol no1">
+          1200+
+        </li>
+      </ul>
+      <ul id='ulb' style="list-style: none;">
+        <li>
+          ALUMNI
+        </li>
+        <li class="nol no2">
+          4000+
+        </li>
+      </ul>
+      <ul id='ulc' style="list-style: none;">
+        <li>
+          FACULTY
+        </li>
+        <li class="nol no3">
+          50+
+        </li>
+      </ul>
+    </div>
+  </section>
+  <!-- -------------------------------------------------------------------------------------------------------------------  -->
+  <section class="num37">
+    <div class="no37" id="mm1">STUDENTS 1200+</div>
+    <div class="no37" id="mm2"> ALUMNI 4000+</div>
+    <div class="no37" id="mm3">FACULTY 50+</div>
+  </section>
+  <!-- ----------------------------------------------------------------------------------------------------- -->
+  <section class="feat" id="ft">
+
+    <div id="prof" class="prof">
+
+      <div class="text">
+        <h3 style="font-weight: 600 !important; font-size: 1.5rem !important;">Features</h3>
+      </div>
+      <div class="btn">
+        <span>
+          <img src="../static/MenuN.png" id="Me" width="30px" height="30px">
+        </span>
+      </div>
+
+      <div class="dabba">
+        <i id="viewprofile"><a href="./linkedinurl"><img src="../static/RequestN.png"></a></i>
+        <i id="chatfriend"><a href="./chat.html"><img src="../static/ChatN.png"></a></i>
+        <i id="searchalumni"><a href="./searchprofile"><img src="../static/SearchN.png" width="26px" height="26px"></a></i>
+        <i id="jobopp"><img src="../static/PlusN.png"></i>
+
+      </div>
+    </div>
+
+    <div id="des">
+      <br><br><br><br><br><br><br><br>
+      <h1 style="font-weight: 600 !important;">Features</h1>
+      <h3 style="margin-top: 24px; font-weight: 600 !important;">The alumni portal is equipped with various features!
+        Click on the menu and hover to learn more.</h3>
+    </div>
+
+  </section>
+  <!-- ---------------------------------------functionsiphonexr------------------------------------ ------------------------------------------------------------------------------------------------->
+
+  <section class="function38">
+    <div class="hole39">
+      <a href="./linkedinurl">
+        <img src="../static/yourprofilE1.jpeg" alt="">
+        <p class="ppinfo39">Go to your Profile</p>
+      </a>
+    </div>
+    <div class="hole39" id="hole396">
+      <a href="./chat.html">
+        <img src="../static/yourprofilE1.jpeg" alt="">
+        <p class="ppinfo39 ppinfo396">Chat with your friend</p>
+      </a>
+    </div>
+    <div class="hole39">
+      <a href="">
+        <img src="../static/yourprofilE1.jpeg" alt="">
+        <p class="ppinfo39 ">Identify Alumni</p>
+      </a>
+    </div>
+    <div class="hole39" id="hole396">
+      <a href="">
+        <img src="../static/yourprofilE1.jpeg" alt="">
+        <p class="ppinfo39 ppinfo396">Job Opportunities</p>
+      </a>
+    </div>
+    <!-- ---------------------------------------------------------------gallery---------------------------------- -->
+  </section>
+  <div class="gallery" id="gallerypic">
+    <div class="container">
+      <div class="box">
+        <img src="../static/1 3.png" />
+        <span>CSS</span>
+      </div>
+      <div class="box">
+        <img src="https://source.unsplash.com/1000x802" />
+        <span>Image</span>
+      </div>
+      <div class="box">
+        <img src="https://source.unsplash.com/1000x804" />
+        <span>Hover</span>
+      </div>
+      <div class="box">
+        <img src="https://source.unsplash.com/1000x806" />
+        <span>Effect</span>
+      </div>
+      <div class="box">
+        <img src="https://source.unsplash.com/1000x808" />
+        <span>Effect</span>
+      </div>
+    </div>
+    <div class="more_images"><a href="">MORE IMAGES</a></div>
+  </div>
+
+  <!-- ---------------------------------------------------------------------------------------------------------  -->
+  <!-- gallery for mobile version -->
+
+  <div class="promax314">
+    <h5 class="center">Gallery</h5>
+    <div class="carton" id="carton2">
+      <!-- <div class="container"> -->
+      <div id="carouselExampleCaptions" class="carousel slide">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+            aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+            aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+            aria-label="Slide 3"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"
+            aria-label="Slide 4"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4"
+            aria-label="Slide 5"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="../static/alumni/1.jpeg" class="d-block w-100 sliderimages" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5 class="bold text-white">First slide label</h5>
+              <p class="text-white">Some representative placeholder content for the first slide.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="../static/alumni/2.jpeg" class="d-block w-100 sliderimages" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Second slide label</h5>
+              <p>Some representative placeholder content for the second slide.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="../static/alumni/3.jpeg" class="d-block w-100 sliderimages" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Third slide label</h5>
+              <p>Some representative placeholder content for the third slide.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="../static/alumni/4.jpg" class="d-block w-100 sliderimages" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Fourth slide label</h5>
+              <p>Some representative placeholder content for the fourth slide.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="../static/alumni/5.jpg" class="d-block w-100 sliderimages" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Fifth slide label</h5>
+              <p>Some representative placeholder content for the fifth slide.</p>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <!-- </div> -->
+    </div>
+  </div>
+
+  <!-- -------------------------------------------------------------------------------------------------  -->
+  <div class="From_the_Alumni">
+    <h2>From the Alumni</h2>
+
+    <div class="cards_section">
+      {% for forum in forumss|reverse %}
+      <div class="cards">
+        <img class="download-2-icon" alt="" src="./public/download-2@2x.png" />
+
+        <div class="comment">
+          {{forum['comment']}}
+        </div>
+        <div>
+
+          <div class="line"></div>
+          <div class="profile">
+            <img class="download-2-1" alt="" src="./public/download-2-1@2x.png" />
+            <div class="info">
+              <div class="cassie-perry">{{forum['alumni_name']}}</div>
+              <div class="class-of-2020">class of {{forum['batch']}}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer" id="footer_logo">
+      <div class="logo"><img src="logo 2.png" alt="" /></div>
+      <div class="iitindore">IIT INDORE</div>
+    </div>
+    <div class="footer" id="footer_quick_links">
+      <h2>QUICK LINKS</h2>
+      <div id="links">
+        <div id="link1">
+          <ul>
+            <li>
+              <a href="#">Home</a>
+            </li>
+            <li>
+              <a href="#aboutus">About</a>
+            </li>
+            <li>
+              <a href="#events33">Events</a>
+            </li>
+          </ul>
+        </div>
+        <div id="link2">
+          <ul>
+            <li>
+              <a href="#gallerypic">Gallery</a>
+            </li>
+            <li>
+              <a href="./chat.html">Chat</a>
+            </li>
+            <li>
+              <a href="./linkedinurl">Profile</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer" id="footer_contact_us ">
+      <h2 id="contactpls">CONTACT US</h2>
+      <div class="phone_footer_txt">
+        <div class="call_img"><img src="../static/call.png" alt="" /></div>
+        <div id="num_1">+91-731-6603122</div>
+        <div id="num_2">+91-731-6603555</div>
+      </div>
+      <div class="email_footer_txt">
+        <br>
+        <div class="email_img"><img src="../static/email.png" alt="" /></div>
+        <div id="email_1">alumnicell@iiti.ac.in</div>
+        <div id="email_2">acroffice@iiti.ac.in</div>
+      </div>
+    </div>
+    <div class="footer" id="footer_address">
+      <h2>ADDRESS</h2>
+      <div class="map_img"><img src="../static/map.png" alt="" /></div>
+      <div class="address_text_footer_txt">
+        Alumni and Corporate Relations Office, <br />
+        7th floor, Abhinandan Bhavan, <br />
+        Indian Institute of Technology Indore,Khandwa Road, <br />
+        Simrol,Indore-453552 India
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>

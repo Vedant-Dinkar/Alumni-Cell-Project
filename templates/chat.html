@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet">
+  <title>Chat</title>
+  <script src="../static/script.js"></script>
+  <style>
+    body{
+      margin: 0;
+      font-family: "Ubuntu";
+      text-align: center;
+      background-image: url('../static/Group 46.png');
+    }
+
+    .navbar {
+      height: 80px;
+      width: 100%;
+      background-color: #4c5175;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .centre {
+      flex-grow: 1;
+    }
+
+    #logo {
+      margin-left: 1%;
+    }
+
+    #home {
+      margin-right: 1%;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      border: 2px solid white;
+      outline: none;
+      background-color: #4c5175;
+    }
+
+    #home img {
+      filter: none;
+      margin: 11px 11px;
+      transition: filter 0.3s ease;
+    }
+
+    #home:hover img {
+      filter: invert();
+    }
+
+    #home:hover {
+      background-color: #444a74;
+    }
+
+    #whitecont {
+      background: white;
+      box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+      height: 420px;
+      margin: 5% auto;
+      width: 80%;
+      border-radius: 20px;
+      margin-bottom: 5%;
+    }
+
+/* Additional CSS if needed for the form and other elements within .whitecont */
+
+
+    .join button{
+      outline: none;
+      border: none;
+      height: 40px;
+      width: 10%;
+      border-radius: 0 8px 8px 0;
+      color: white;
+      background-color: #003153;
+      margin: 0;
+    }
+
+    .join input{
+      background: #f5ede1;
+      height: 40px;
+      width: 20%;
+      outline: none;
+      border: none;
+      border-radius: 8px 0 0 8px;
+      margin: 0;
+      text-indent: 12px;
+    }
+
+    span{
+      margin-left: 5%;
+    }
+
+    form button{
+      margin-top: 10px;
+      height: 50px;
+      border: none;
+      border-radius: 8px;
+      width: 150px;
+      color: white;
+      background-color: #003153;
+    }
+
+    
+
+  </style>
+</head>
+<body>
+  <div class="navbar">
+    <img id="logo" src="../static/logo.jpg" height="60px" width="60px">
+    <div class="centre">
+      <img src="../static/IITI.png" height="60px" style="filter: brightness(100);">
+    </div>
+    <div id="home">
+      <a href="./home"><img src="../static/home.png" width="24" height="24" alt="Home"></a>
+    </div>
+  </div>
+
+  <div id="whitecont" class="center">
+    <!--{% extends 'base.html' %} {% block content %}-->
+    <br>
+    <br>
+    <form method="post" class="buttons">
+      <h1>Enter The Chat Room</h1>
+      <!-- <div> -->
+        <!-- <label>Name:</label> -->
+        <!-- <input type="text" placeholder="Pick a name!" name="name" value="{{name}}"/> -->
+        <!-- <input type="text" placeholder="Pick a name!" name="name" value="{{ first_name }} {{ last_name }}" /> -->
+      <!-- </div> -->
+      <div class="join">
+        <input type="text" placeholder="Room Code" name="code" value="{{code}}" />
+        <button type="submit" name="join">Join a Room</button>
+      </div>
+      <br>
+      Or
+      <br>
+      <button type="submit" name="create" class="create-btn">Create a Room</button>
+      {% if error %}
+      <p>{{error}}</p>
+      {% endif %}
+    </form>
+    {% endblock %}
+  </div>
+</body>
+</html>

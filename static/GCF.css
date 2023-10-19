@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
+
+.container {
+  display: flex;
+  width: 100%;
+  padding: 4% 2%;
+  box-sizing: border-box;
+  height: 100vh;
+}
+
+.box {
+  border-radius: 20px;
+  flex: 1;
+  overflow: hidden;
+  transition: .5s;
+  margin: 0 2%;
+  box-shadow: 0 20px 30px rgba(0,0,0,.1);
+  line-height: 0;
+}
+
+.box > img {
+  width: 200%;
+  height: calc(100% - 10vh);
+  object-fit: cover; 
+  transition: .5s;
+}
+
+.box > span {
+  font-size: 3.8vh;
+  display: block;
+  text-align: center;
+  height: 10vh;
+  line-height: 2.6;
+}
+
+.box:hover { flex: 1 1 50%; }
+.box:hover > img {
+  width: 100%;
+  height: 100%;
+}
+.gallery{
+  /*background: #64CCC5;*/
+  background-color: #003153;
+  color: white;
+  margin-bottom: 50px;
+}
+.more_images{
+  display: inline;
+  float: right;
+  border-radius: 0px 0px 0px 30px;
+  background: #001C30;
+  padding: 20px;
+  /* float: right; */
+}
+.more_images a{
+  color: #FFF;
+  text-align: center;
+  font-size: 35px;
+  font-family: Roboto Serif;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+/* ------------------------------------------------------------------------------------------------------------------------------- */
+
+.download-2-icon {
+  height: 50px;
+  width: auto;
+}
+.download-2-1 {
+  height: 64px;
+  width: auto;
+}
+
+.cards {
+  padding: 10px;
+
+  /* width: 22%;
+  width: 300px; */
+  width: 300px;
+  height: 400px;
+  border-radius: 11px;
+  background: #fff;
+  box-shadow: 4px 4px 8px 0px rgba(0, 0, 0, 0.25);
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+}
+
+.comment {
+  margin: 10px;
+  color: #000;
+  text-align: center;
+  font-size: 21px;
+  font-family: 'Architects Daughter', cursive;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.line {
+  position: relative;
+  height: 1px;
+  background-color: black;
+}
+
+.line::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-color: black;
+}
+.info {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  align-items: center;
+  justify-content: center;
+}
+.cassie-perry {
+  color: #000;
+  text-align: center;
+  font-size: 26px;
+  font-family: Ubuntu;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.class-of-2020 {
+  color: #514f4a;
+  text-align: center;
+  font-size: 21px;
+  font-family: Ubuntu;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.profile {
+  display: flex;
+}
+
+.cards_section{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.From_the_Alumni{
+    margin: 150px 0px;
+}
+.From_the_Alumni h2{
+   padding-right: 20px;
+    text-align: right;
+    color: #000;
+
+font-size: 77px;
+font-family: Jacques Francois;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+padding-bottom: 20px;
+}
+
+
+/* -------------------------------------------------------------------------------------------------------------------- */
+
+  
+  footer{
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.53) 100%), #176B87;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  
+  }
+footer h2{    color: #FFF;
+  font-size: 36px;
+  font-family: Ubuntu;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+padding-top: 20px;}
+  .footer{
+ margin: 20px 20px;
+
+  }
+  footer a{
+    text-decoration: none;
+   color: white;
+  }
+  footer li{
+    list-style-type: none;
+  }
+  #footer_logo{
+    margin-top: 40px;
+  }
+  .iitindore{
+    padding-top: 20px;
+    color: #FFF;
+text-align: center;
+font-size: 39px;
+font-family: Ubuntu;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+
+}
+.phone,.email{
+  padding-top: 20px;
+}
+#links{
+  display: flex;
+  justify-content: space-between;
+}
+#link2{
+  padding-right: 20px;
+}
+#links li{
+  color: #FFF;
+font-size: 20px;
+font-family: Ubuntu;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+  padding: 10px 0px;
+}
+.phone_footer_txt,.email_footer_txt,.address_text_footer_txt{
+  color: #FFF;
+font-size: 20px;
+font-family: Ubuntu;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+#footer_contact_us,#footer_address{
+  text-align: center;
+}
+.address_text_footer_txt{
+  padding-top:  10px;
+}
+
+.gallery .container .box span{
+  font-weight: 300;
+  font-family: 'Ubuntu';
+  background-color: ivory;
+  color: black;
+  box-shadow: 4px 4px 4px #252525;
+}

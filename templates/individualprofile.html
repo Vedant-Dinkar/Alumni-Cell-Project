@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>navigation bar,log in,sign up</title>
+    <!-- <link rel="stylesheet" href="../static/profile.css"> -->
+    <link rel="stylesheet" href="../static/individualprofile.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet">
+
+</head>
+
+
+<body>
+
+    <!-- <div class="barnav">
+        <div class="topds"></div>
+        <span id="clg">
+            <img id="log" src="../static/logo/download.jpeg">
+            <span id="nm">Indian Institute of Technology, Indore</span>
+        </span>
+        <div class="subbar">
+            <ul style="list-style-type: none; display: flex;">
+                <li><a href="./home.html">HOME</a></li>
+                <li><a href="./gallery.html">GALLERY</a></li>
+                <li><a href="./about.html">ABOUT</a></li>
+                <li><a href="./contact.html">CONTACT</a></li>
+            </ul>   
+        </div>
+    </div>
+     -->
+    <div class="lol">
+
+        <div class="container">
+            <nav id="navbar">
+                <div id="logo">
+                    <img src="../static/logo/download.jpeg" alt="IIT INDORE">
+
+                </div>
+                <p class="iit">Indian Institute of Technology Indore</p>
+                <p class="IITI">IIT Indore</p>
+
+
+                <ul class="root">
+                    <li class="item" id="home"><a href="./#" target="_blank">Home</a></li>
+                    <!-- <li class="item"><a href="" target="_blank">Events</a></li> -->
+                    <li class="item"><a href="./#aboutus" target="_blank">About</a></li>
+                    <li class="item"><a href="./#gallerypic" target="_blank">Gallery</a></li>
+                    <!-- <li class="item"><a href="" target="_blank">Connect</a></li> -->
+                    <li class="item"><a href="./#contactpls" target="_blank">Contact </a></li>
+                    <li class="item" id="menu"><a href="" target="_blank">Menu </a></li>
+
+                </ul>
+
+            </nav>
+            <!-- <div class="bigbutton">
+            <button class="btn1">Log In</button>
+            <button  class="btn1">Join Us</button></div>
+            
+        </div> -->
+        </div>
+
+        <section class="PROFILEPAGE">
+            <div class="profilepage">
+                <div class="ppam33 crater36">
+                    <div class="name  ">
+                        <div class="imgbox box" id="box1">
+                            <img src="../static/profile.jpeg" alt="">
+                        </div>
+                        <div class="infopersonal box">
+                            <h3>{{ extracted_info.first_name }} {{ extracted_info.last_name }} </h3>
+                            <p>Education: {{ extracted_info.headline }}</p>
+                            <!-- <p>Batch: 2017</p> -->
+                            <p>Company: {% for company in extracted_info.companies %}{{ company }}{% if not loop.last
+                                %}, {% endif %}{% endfor %}</p>
+                            <p>Location:{{ extracted_info.location_name }}</p>
+                            <button class="connectbtn"><a href="https://www.linkedin.com/">Go to Linkedin</a></button>
+                        </div>
+                    </div>
+
+                    <div class="aboutme box" id="box394">
+                        <h3>About Me</h3>
+                        <div class="horizontalline1"></div>
+                        <p>{{ extracted_info.headlines }} </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+</body>
+
+</html>

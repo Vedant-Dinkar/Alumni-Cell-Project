@@ -1,0 +1,10 @@
+{
+<<<<<<< HEAD
+    "liveServer.settings.port": 5501
+=======
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.autopep8"
+    },
+    "python.formatting.provider": "none"
+>>>>>>> 5c67b76eb5325fdb728f5c03f7386b49afcd1260
+}

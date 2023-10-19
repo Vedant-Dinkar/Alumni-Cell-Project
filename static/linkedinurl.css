@@ -1,0 +1,552 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    overflow-x: hidden;
+    font-family: "Ubuntu" !important;
+}
+  
+body{
+    background-image: url('./Group 46.png');
+}
+  
+/* .barnav{
+    font-family: 'Inter';
+     position: fixed; 
+    height: 18%;
+    width: 100%;
+    background-color: #003153;
+}
+  
+.topds{
+    position: absolute;
+    background-color: #f5f5f5;
+    height: 36%;
+    width: 100%;
+    z-index: -1;
+}
+  
+#log{
+    position: relative;
+    top: 10%;
+    left: 5%;
+    height: 80%;
+}
+  
+#clg{
+    font-size: 20px;
+}
+  
+#nm{
+    position: absolute;
+    top: 10%;
+    left: 16%;
+}
+  
+.subbar ul li a{
+    text-align: center;
+    text-decoration: none;
+    color: white;
+}
+  
+.subbar ul{
+    width: 100%;
+}
+  
+.subbar ul li{
+    font-size: 12px;
+    text-align: center;
+    margin-right: 5%;
+    transform: translateY(-150%);
+}
+  
+.subbar ul li:nth-child(1){
+    margin-left: 40%;
+}
+  
+.subbar ul li:nth-child(1) a:hover{
+    color: cyan;
+}
+  
+.subbar ul li:nth-child(2) a:hover{
+    color: cyan;
+}
+  
+.subbar ul li:nth-child(3) a:hover{
+    color: cyan;
+}
+  
+.subbar ul li:nth-child(4) a:hover{
+   color: cyan;
+} */
+
+
+#navbar {
+    z-index: 5;
+    /* display: flex; */
+    display: grid;
+    grid-template-areas:
+        'logo iit'
+        'logo root';
+}
+
+.root {
+     display: flex; 
+    /* margin-top: 51px; */
+     /* margin-right: 800px; */
+    /* margin-left: -800px; */
+    /* margin: 0px 25px; */
+     /* display: grid; 
+     border: 2px solid red;  
+     grid-template-columns: repeat(4, 1fr); 
+       grid-column-gap: 16rem;   */
+
+    grid-area: root;
+    width: 100%;
+    /* justify-content: center; */
+    /* align-items: center; */
+}
+
+#navbar ul li a {
+    font-size: 14px;
+    text-decoration: none;
+    /* padding: 100px; */
+        color: white; 
+    /* padding-bottom:25px ; */
+    /* margin-top: 10px; */
+    /* margin-bottom: 10px; */
+     margin: 0px 90px; 
+}
+
+#navbar ul li {
+    list-style: none;
+}
+
+#logo {
+    padding-left: 50px;
+    /* height: 150px; */
+    /* width: 150px; */
+    grid-area: logo;
+    position: relative;
+    top: 10px;
+}
+
+img {
+    height: 102px;
+    width: 84px;
+
+}
+
+.iit {
+    font-size: 20px;
+    display: inline-block;
+    grid-area: iit;
+    /* width: 533px; */
+     /* margin-right: 1500px; */
+    /* height: 37px; */
+     margin-top: 20px; 
+    color: black;
+     margin-left: -100px; 
+
+    /* margin: 10px; */
+    /* margin-left: -49px; */
+    /* border: 2px solid red;  */
+
+}
+.IITI{
+    display: none;
+}
+#menu{
+    display: none;
+}
+
+ #navbar::before {
+    content: "";
+    background-color: #4c5175;
+    position: absolute;
+    top: 45px;
+    width: 100%;
+    height: 60px;
+    z-index: -1;
+    overflow: hidden;
+} 
+
+/* .container::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 80px;
+    z-index: -1;
+    overflow: hidden;
+} */
+
+#navbar ul li a:hover {
+    color: aqua;
+}
+.btn1{
+    
+    /* display: block; */
+    float: right;
+     margin: 0px 10px; 
+    /* position: absolute;  */
+    position: relative;
+    bottom: 90px; 
+    font-size: 12px;
+    background-color: #bce7d9;
+    padding: 6px 6px;
+}
+.btn1:hover{
+   background-color: grey;
+    color:violet;
+}
+
+.lol {
+    overflow: hidden;
+}
+
+/* media quries for navbar  */
+
+@media only screen and (min-width:950px) and (max-width:1215px){
+    /* .IITI{
+       display: block; font-size: 35px;
+       display: inline-block;
+       grid-area: iit;
+       height: 37px;
+       margin-top: 30px;
+       color: black;
+   }*/
+   .iit{
+   margin-left: 35px;
+   }  
+   #navbar ul li a{
+       margin: 0px 60px;
+   }
+   
+   }
+   @media only screen and (min-width:750px) and (max-width:950px){
+    /* .IITI{
+       display: block; font-size: 35px;
+       display: inline-block;
+       grid-area: iit;
+       height: 37px;
+       margin-top: 30px;
+       color: black;
+   }*/
+   .iit{
+    margin-left: 65px; 
+   } 
+   #navbar ul li a{
+       margin: 0px 60px;
+   }
+   
+   }
+
+   @media only screen and (min-width:520px) and (max-width:750px){
+       #navbar ul li a{
+           margin: 0px 30px;
+       }
+   }
+   @media only screen and (min-width:400px) and (max-width:520px){
+       #navbar ul li a{
+           margin: 0px 20px;
+       }
+       #logo{
+           padding-left: 10px;
+       }
+       nav div img{
+           height: 102px;
+           width: 62px;
+       }
+   }
+   @media only screen and (min-width:320px) and (max-width:400px){
+       #navbar ul li a{
+           margin: 0px -22px;
+           margin-left: 86px;
+       }
+       
+       #logo{
+           padding-left: 10px;
+       }
+       nav div img{
+           height: 102px;
+           width: 62px;
+       }
+       .item{
+           display: none;
+       }
+       #home{
+           display: inline-block;
+           
+       }
+       #menu{
+           display: inline-block;
+       }
+   }
+   @media only screen and (min-width:270px) and (max-width:320px){
+       #navbar ul li a{
+           margin: 0px 22px;
+           margin-left: 57px;
+       }
+       
+       #logo{
+           padding-left: 10px;
+       }
+       nav div img{
+           height: 102px;
+           width: 62px;
+       }
+       .item{
+           display: none;
+       }
+       #home{
+           display: inline-block;
+           
+       }
+       #menu{
+           display: inline-block;
+       }
+   }
+   
+
+   /* iit indore tag in different phone  */
+/* iphone se  */
+@media only screen and (min-width:360px) and (max-width:400px){
+   .iit{
+       display: none;
+   }
+   .IITI{
+           display: block; font-size: 15px;
+           display: inline-block;
+           grid-area: iit;
+           height: 37px;
+           margin-top: 30px;
+           margin-left: -45px;
+           color: black;
+   }
+   #navbar::before{
+       height: 47.5px;
+       top:55px;
+   }
+
+}
+@media only screen and (min-width:400px) and (max-width:500px){
+   .iit{
+       display: none;
+   }
+   .IITI{
+           display: block; font-size: 15px;
+           display: inline-block;
+           grid-area: iit;
+           height: 37px;
+           margin-top: 30px;
+           margin-left: -8px;
+           color: black;
+   }
+   #navbar::before{
+       height: 47.5px;
+       top:55px;
+   }
+
+}
+@media only screen and (min-width:500px) and (max-width:600px){
+   .iit{
+       display: none;
+   }
+   .IITI{
+           display: block; font-size: 15px;
+           display: inline-block;
+           grid-area: iit;
+           height: 37px;
+           margin-top: 30px;
+           margin-left: -49px;
+           color: black;
+   }
+   #navbar::before{
+       height: 47.5px;
+       top:55px;
+   }
+   nav div img {
+       width: 60px;
+   }
+   #logo{
+       padding-left: 10px;
+   }
+
+}
+@media only screen and (min-width:521px) and (max-width:600px){
+   .iit{
+       display: none;
+   }
+   .IITI{
+           display: block; font-size: 15px;
+           display: inline-block;
+           grid-area: iit;
+           height: 37px;
+           margin-top: 30px;
+           margin-left: -26px;
+           color: black;
+   }
+   #navbar::before{
+       height: 47.5px;
+       top:55px;
+   }
+   #logo{
+       padding-left: 10px;
+   }
+
+}
+@media only screen and (min-width:600px) and (max-width:900px){
+   .iit{
+       display: none;
+   }
+   .IITI{
+           display: block; font-size: 15px;
+           display: inline-block;
+           grid-area: iit;
+           height: 37px;
+           margin-top: 30px;
+           margin-left: -55px;
+           color: black;
+   }
+   #navbar::before{
+       height: 47.5px;
+       top:55px;
+   }
+   #logo{
+       padding-left: 10px;
+   }
+
+}
+@media only screen and (min-width:700px) and (max-width:900px){
+   .IITI{
+       margin-left: -105px;
+       font-size: 20px;
+   }
+}
+@media only screen and (min-width:750px) and (max-width:900px){
+   .IITI{
+       margin-left: -6px;
+       font-size: 20px;
+   }
+}
+@media only screen and (min-width:900px) and (max-width:1100px){
+   .iit{
+       margin-left: -58px;
+       font-size: 20px;
+   }
+}
+@media only screen and (min-width:1100px) and (max-width:1215px){
+   .iit{
+       margin-left: -156px;
+       font-size: 20px;
+   }
+}
+
+@media only screen and (min-width:310px) and (max-width:360px){
+   .iit{
+       display: none;
+   }
+   .IITI{
+           display: block; font-size: 15px;
+           display: inline-block;
+           grid-area: iit;
+           height: 37px;
+           margin-top: 30px;
+           margin-left: -27px;
+           color: black;
+   }
+   #navbar::before{
+       height: 45px;
+       top:55px;
+   }
+   #logo{
+       padding-left: 10px;
+   }
+
+
+}
+@media only screen and (min-width:321px) and (max-width:336px){
+   .IITI{  margin-left: -26px;
+}}
+@media only screen and (min-width:270px) and (max-width:310px){
+   .IITI{  
+       display: none;
+}
+.iit{
+   display: none;
+}
+
+nav ul li a{
+position: relative;
+bottom: 20px;
+margin: 0px 22px;
+margin-left:57px;
+}
+}
+@media only screen and (min-width:311px) and (max-width:320px){
+   nav ul li a{
+       position: relative;
+       bottom: 5px;
+}}
+@media only screen and (min-width:309px) and (max-width:310px){
+   nav ul li a{
+       position: relative;
+       bottom: 17px;
+}}
+@media only screen and (min-width:320px) and (max-width:340px){
+   nav ul li a{
+       position: relative;
+       bottom: 8px;
+}}
+@media only screen and (min-width:340px) and (max-width:400px){
+   nav ul li a{
+       position: relative;
+       bottom: 10px;
+}}
+
+/* Linkedinurl------------------------------------------------------------------------------------------ */
+
+.h37{
+    margin:40px;
+    margin-bottom: 20px;
+}
+
+.lp32{
+    margin: 40px;
+}
+
+.bs33{
+    padding: 5px;
+    margin: 25px auto;
+    display: block;
+}
+.urlbox34{
+    width: 70%;
+    height: 25px;
+}
+.pl43{
+    margin: 30px;
+    font-size: 25px;
+    
+}
+@media(max-width:425px){
+    .IITI{
+        margin-left: 10px;
+        font-size: 20px;
+    }
+    .urlbox34{
+        width: 100%;
+        height: 25px;
+    }
+}
+
+.whitecont{
+    background-color: white;
+    margin: 5%;
+    height: 500px;
+    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    border-radius: 12px;
+}

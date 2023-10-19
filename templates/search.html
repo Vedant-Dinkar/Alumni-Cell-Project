@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Alumni</title>
+    <!--<link rel="stylesheet" href="../static/profile.css">-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='search.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <script src="{{ url_for('static', filename='search.js') }}"></script>
+</head>
+<body>
+    <div class="barnav">
+        <div class="topds"></div>
+        <span id="clg">
+            <img id="log" src="./logo 2.png">
+            <span id="nm">Indian Institute of Technology, Indore</span>
+        </span>
+        <div class="subbar">
+            <ul style="list-style-type: none; display: flex;">
+                <li><a href="./home.html">HOME</a></li>
+                <li><a href="./gallery.html">GALLERY</a></li>
+                <li><a href="./about.html">ABOUT</a></li>
+                <li><a href="./contact.html">CONTACT</a></li>
+            </ul>   
+        </div>
+    </div>
+
+    <form id="searchForm" method="post">
+        <div class="search">
+            
+                <div class="txt_field">
+                    <input type="text" id="searchQuery" required>
+                    <span></span>
+                    <label>Name</label>
+                </div>
+            
+            <img src="./search-icon.png" height="60%">
+        </div>
+
+        <div class="mac">
+            <div class="filter"> 
+                <span>
+                    Filter By:
+                </span>        
+                <select id="branch">
+                    <option value="">Branch</option>
+                    <option value="Computer Science & Engineering">Computer Science & Engineering</option>
+                    <option value="Electrical Engineering">Electrical Engineering</option>
+                    <option value="Mechanical Engineering">Mechanical Engineering</option>
+                    <option value="Civil Engineering">Civil Engineering</option>
+                    <option value="Metallurgical Engineering and Materials Science">Metallurgical Engineering and Materials Science</option>
+                </select>
+                <select id="city">
+                    <option value="">City</option>
+                    <option value="Mumbai">Mumbai</option>
+                    <!-- Add city options here -->
+                </select>
+                <select id="year">
+                    <option value="">Year</option>
+                    <option value=2026>2026</option>
+                    <!-- Add year options here -->
+                </select>
+                <select id="company">
+                    <option value="">Company</option>
+                    <option value="ANMA">ANMA</option>
+                    <!-- Add company options here -->
+                </select>
+            </div>>
+
+
+            <div class="res">
+                <!--                
+                    <div>
+                        <center>
+                            <img src="./182-1829287_cammy-lin-ux-designer-circle-picture-profile-girl.png" height="60px" width="60px">
+                            <br
+                            <span>Name</span>
+                            <br>
+                            <br>
+                            <p>Branch: <span></span></p>
+                            <p>Batch: <span></span></p>
+                            <p>Company: <span></span></p>
+                            <p>Location: <span></span></p>
+                        </center>
+                    </div>
+                -->
+            </div>
+
+            <div class="events">
+                <span>
+                    Events:
+                </span> 
+                <center>
+                    <div class="pics">
+                        <div>
+                            <img src="./5d1608324bf9a_iit_indore_banner.jpg" width="80%" height="100%">
+                            <span>
+                                Desc
+                            </span>
+                            <button>
+                                Register +
+                            </button>
+                        </div>
+                    </div>
+                </center>
+            </div> 
+
+        </div>
+    </form>
+    
+</body>
+</html>

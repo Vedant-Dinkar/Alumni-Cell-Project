@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>All Profiles</title>
+</head>
+<body>
+    <h1>All Profiles</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Sr No.</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Location</th>
+                <th>Headline</th>
+                <th>Companies</th>
+                <th>Branch</th>
+                <th>LinkedIn URL</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for profile in all_profiles %}
+            <tr>
+                <td>{{ loop.index }}</td>
+                <td>{{ profile.first_name }} {{ profile.last_name }}</td>
+                <td>{{ profile.email }}</td>
+                <td>{{ profile.location_name }}</td>
+                <td>{{ profile.headline }}</td>
+                <td>{{ profile.companies|join(', ') }}</td>
+                <td>{{ profile.branch }}</td>
+                <td><a href="{{ profile.url }}">{{ profile.url }}</a></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

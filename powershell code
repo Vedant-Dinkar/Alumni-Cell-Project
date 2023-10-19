@@ -1,0 +1,72 @@
+Get-Content schema.sql | sqlite3 questions.db
+
+sqlite3 questions.db-to open database
+.tables-shows tables
+
+select * from users
+
+update users set admin ='1' where id =1;
+
+
+py -m venv env   - to create virtual env name env
+.\env\Scripts\Activate.ps1   -to activate virtual env
+pip install flask  -  to install flask
+cls -clear terminal
+
+set flask udemy=app.py  - helps to set a file
+flask run- helps to run the required set file ,it runs directly app.py
+but to run any other file we can use:
+export flask udemhy=tut1.py and then type flask run
+to run in debug mode the existing server:
+export FLASk_DEBUG=1 and then flask run
+
+deactivate -take out from virtual env
+
+sqlite3-to enter in sqlite
+
+create table users(id integer primary key autoincrement,name text,location text);
+.table-shows users
+
+for login database:
+Get-Content schema.sql | sqlite3 login.db 
+sqlite3 login.db
+
+git----------------------------------------------------------------------------------
+
+git config --global user.name"Parth Deshmukh"
+git config --global user.email"deshmukhparth293@gmail.com"
+git config --global --edit
+
+
+mkdir LetsLearnGit- to make dir
+cd LetsLearnGit
+git init
+git add tut.cpp -it add file to staging area
+git status -shows status of git
+git commit -m"initial commit"
+git log-shows all commits
+git add .  - all add files to staging area
+
+git checkout hashcode of required commit
+git checkout master
+
+git branch dev-create dev branch
+git branch -shows branch
+
+git  checkout -b parth/multiply - create branch name with parth/multiply
+
+git checkout dev-changes branch to dev
+
+git merge parth/multiply -it merges the req branch with the branch which is open
+
+cd .. -to come out of directory
+
+git clone link
+
+
+git checkout --orphan major 
+git rm --cached -r .
+
+git switch -f main  -if not changing branch
+
+git config push.default current

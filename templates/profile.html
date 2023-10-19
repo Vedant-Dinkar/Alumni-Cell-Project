@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile | Alumni IITI</title>
+    <link rel="stylesheet" href="../static/profile.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet">
+    <style>
+        *{
+    margin: 0;
+}
+  
+body{
+    background-image: url('../static/Group\ 46.png');
+}
+  
+.barnav{
+    font-family: 'Inter';
+    position: fixed;
+    height: 18%;
+    width: 100%;
+    background-color: #003153;
+    z-index: 1;
+}
+  
+.topds{
+    position: absolute;
+    background-color: #f5f5f5;
+    height: 36%;
+    width: 100%;
+    z-index: -1;
+}
+  
+#log{
+    position: relative;
+    top: 10%;
+    left: 5%;
+    height: 80%;
+}
+  
+#clg{
+    font-size: 20px;
+}
+  
+#nm{
+    position: absolute;
+    top: 10%;
+    left: 16%;
+}
+  
+.subbar ul li a{
+    text-align: center;
+    text-decoration: none;
+    color: white;
+}
+  
+.subbar ul{
+    width: 100%;
+}
+  
+.subbar ul li{
+    font-size: 12px;
+    text-align: center;
+    margin-right: 5%;
+    transform: translateY(-150%);
+}
+  
+.subbar ul li:nth-child(1){
+    margin-left: 40%;
+}
+  
+.subbar ul li:nth-child(1) a:hover{
+    color: cyan;
+}
+  
+.subbar ul li:nth-child(2) a:hover{
+    color: cyan;
+}
+  
+.subbar ul li:nth-child(3) a:hover{
+    color: cyan;
+}
+  
+.subbar ul li:nth-child(4) a:hover{
+    color: cyan;
+}
+    </style>
+</head>
+
+
+<body>
+
+    <!-- <div class="barnav">
+        <div class="topds"></div>
+        <span id="clg">
+            <img id="log" src="../static/logo/download.jpeg">
+            <span id="nm">Indian Institute of Technology, Indore</span>
+        </span>
+        <div class="subbar">
+            <ul style="list-style-type: none; display: flex;">
+                <li><a href="./home.html">HOME</a></li>
+                <li><a href="./gallery.html">GALLERY</a></li>
+                <li><a href="./about.html">ABOUT</a></li>
+                <li><a href="./contact.html">CONTACT</a></li>
+            </ul>   
+        </div>
+    </div>
+     -->
+    <div class="lol">
+
+        <div class="barnav">
+            <div class="topds"></div>
+            <span id="clg">
+                <img id="log" src="../static/logo 2.png">
+                <span id="nm">Indian Institute of Technology, Indore</span>
+            </span>
+            <div class="subbar">
+                <ul style="list-style-type: none; display: flex;">
+                    <li><a href="./home">HOME</a></li>
+                    <li><a href="./#gallerypic">GALLERY</a></li>
+                    <li><a href="./#aboutus">ABOUT</a></li>
+                    <li><a href="./#contactpls">CONTACT</a></li>
+                </ul>   
+            </div>
+        </div>
+
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <!--<div class="container">
+            <nav id="navbar">
+                <div id="logo">
+                    <img src="../static/logo/download.jpeg" alt="IIT INDORE">
+
+                </div>
+                <p class="iit">Indian Institute of Technology Indore</p>
+                <p class="IITI">IIT Indore</p>
+
+
+                <ul class="root">
+                    <li class="item" id="home"><a href="./#" target="_blank">Home</a></li>
+                    //<li class="item"><a href="" target="_blank">Events</a></li>
+                    <li class="item"><a href="./#aboutus" target="_blank">About</a></li>
+                    <li class="item"><a href="./#gallerypic" target="_blank">Gallery</a></li>
+                    //<li class="item"><a href="" target="_blank">Connect</a></li>
+                    <li class="item"><a href="./#contactpls" target="_blank">Contact </a></li>
+                    <li class="item" id="menu"><a href="" target="_blank">Menu </a></li>
+
+                </ul>
+
+            </nav>
+        </div>-->
+        <section class="PROFILEPAGE">
+            <div class="profilepage">
+                <div class="ppam33 crater36">
+                    <div class="name  ">
+                        <div class="imgbox box" id="box1">
+                            {% if extracted_info.profile_picture_url %}
+                            <img src="{{ extracted_info.profile_picture_url }}" alt="">
+                            {% else %}
+                            <img src="../static/no-image-icon-15.png" alt="" height="120px" width="120px">
+                            {% endif %}
+                        </div>
+                        <div class="infopersonal box">
+                            <h3>{{ extracted_info.first_name }} {{ extracted_info.last_name }} </h3>
+                            <p>Work: {{ extracted_info.headline }}</p>
+                            <!-- <p>Batch: 2017</p> -->
+                            <p>Company: {% for company in extracted_info.companies %}{{ company }}{% if not loop.last
+                                %}, {% endif %}{% endfor %}</p>
+                            <p>Location: {{ extracted_info.location_name }}</p>
+                            <p>Department: {{ extracted_info.branch }}</p>
+                            <a href="{{ extracted_info.url }}"><button class="connectbtn">Go to Linkedin</button></a>
+                        </div>
+                    </div>
+
+                    <div class="aboutme box">
+                        <h3>About Me</h3>
+                        <div class="horizontalline1"></div>
+                        <p>{{ extracted_info.headlines }}</p>
+                    </div>
+                </div>
+
+                <div class="accessibility crater36">
+                    <h3>Accessibility</h3>
+                    <div class="horizontalline2"></div>
+                    <!-- <button class="chatbtn34  btn35"> <img src="../static/accessibility/chats.png" alt="" class="aimg47"></button>
+                  <button class="searchbtn34  btn35"> <img src="../static/accessibility/search.png" alt="" class="aimg47"></button>
+                  <button class="searchbtn34  btn35"> <img src="../static/accessibility/events.png" alt="" class="aimg47"></button>
+                  <button class="searchbtn34  btn35"><img src="../static/accessibility/gallery.png" alt=""></button>
+                  <button class="searchbtn34  btn35"><img src="../static/accessibility/jobs.png" alt="" class="aimg47"></button> -->
+
+                    <button class="chatbtn34  btn35"><a href="./chat">Chat</a></button>
+                    <button class="searchbtn34  btn35"><a href="./searchprofile">Search</a></button>
+                    <button class="searchbtn34  btn35"><a href="./#events33">Events</a></button>
+                    <button class="searchbtn34  btn35"><a href="./#gallerypic">Gallery</a></button>
+                    <br>
+                    <div class="horizontalline2" style="width: 50%;"></div>
+                    <br>
+                    <br>
+                    <form method="post">
+                        <div class="desc txt_field">
+                            <input type="text" name="job_description"> <!-- Added input field for job description -->
+                            <span></span>
+                            <br>
+                            <label>Job Description</label>
+                        </div>
+                        <button type="submit" class="searchbtn34 btn35">Post Job</button>
+                    </form>
+                    
+                    <!--<button class="searchbtn34  btn35"><a href="./jobs">Post Job</a></button>-->
+                </div>
+
+                <div class="events crater36">
+                    <div class="scroll-bg">
+                        <div class="scroll-div">
+                            <div class="scroll-object">
+                                <h3>Jobs</h3>
+                                <div class="horizontalline3"></div>
+                                <img src="../static/alumni/1.jpeg" alt="">
+                                <img src="../static/alumni/2.jpeg" alt="">
+                                <img src="../static/alumni/3.jpeg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+</body>
+
+</html>

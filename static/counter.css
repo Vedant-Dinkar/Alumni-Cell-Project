@@ -1,0 +1,102 @@
+* {
+    font-family: "Ubuntu";
+    /* font-size: 24px; */                                       /*changed*/
+  }
+  
+  body {
+    margin: 0;
+  }
+
+  .num37{
+    display: none;
+  }
+  
+  .bos {
+    height: 1000px;
+    width: 100px;
+    background-color: rebeccapurple;
+  }
+  
+  .ctr {
+    position: relative;
+  }
+  
+  .ctrs {
+    /* background-image: url('../static/CounterBooks.png'); */
+    width: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 5;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .ctrs ul {
+    position: relative;
+    top: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0;
+    
+  }
+  
+  .ctrs ul li {
+    font-size: 30px;
+    list-style: none;
+  }
+  
+  #ula, #ulb, #ulc {
+    color: white;
+  }
+
+  /* iphone xr------------------------------------------------------------------------------------ */
+@media(max-width:425px){
+
+  .ctrs {
+    background-image: url('../static/CounterBooks.png');
+    background-position: center;
+    background-size: cover;
+    flex-wrap: wrap;
+    /* position: relative; */
+    /* z-index: 100000; */
+  }
+  .ctr img{
+    display: none;
+  }
+
+  .ctrs ul li {
+    font-size: 30px;
+    list-style: none;
+    /* margin: 10px; */
+  }
+
+  .feat{
+    display: none;
+  }
+  .ctr{
+    display: none;
+  }
+  .num37{
+    display: block;
+    background-image: url('../static/CounterBooks.png');
+    /* background-position: center; */
+    background-size: cover;
+    /* display: flex;
+    flex-wrap: wrap; */
+  }
+  .num37 div {
+    font-size: 25px;
+    color: white;
+    margin: 25px 6px;
+    text-align: center;
+  }
+  #mm1{
+    padding-top:20px ;
+  }
+  #mm3{
+    padding-bottom:20px ;
+  }
+}

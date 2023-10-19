@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Search Profile</title>
+    <link rel="stylesheet" href="../static/searchprofile.css">
+</head>
+
+<body>
+
+    <div class="lol">
+
+        <div class="container">
+            <nav id="navbar">
+                <div id="logo">
+                    <img src="../static/logo/download.jpeg" alt="IIT INDORE">
+
+                </div>
+                <p class="iit">Indian Institute of Technology Indore</p>
+                <p class="IITI">IIT Indore</p>
+
+
+                <ul class="root">
+                    <li class="item" id="home"><a href="./#" target="_blank">Home</a></li>
+                    <!-- <li class="item"><a href="" target="_blank">Events</a></li> -->
+                    <li class="item"><a href="./#aboutus" target="_blank">About</a></li>
+                    <li class="item"><a href="./#gallerypic" target="_blank">Gallery</a></li>
+                    <!-- <li class="item"><a href="" target="_blank">Connect</a></li> -->
+                    <li class="item"><a href="./#contactpls" target="_blank">Contact </a></li>
+                    <li class="item" id="menu"><a href="" target="_blank">Menu </a></li>
+
+                </ul>
+
+            </nav>
+            <!-- <div class="bigbutton">
+            <button class="btn1">Log In</button>
+            <button  class="btn1">Join Us</button></div>
+            
+        </div> -->
+        </div>
+
+        <section class="sp37">
+            <h1>Search Profile</h1>
+            <form method="POST">
+                <label for="email" >Enter Email:</label>
+                <input type="text" name="email" id="email" required placeholder="search by email">
+                <button type="submit">Search</button>
+            </form>
+            {% if error %}
+            <p class="error328">{{ error }}</p>
+            {% endif %}
+        </section>
+</body>
+
+</html>

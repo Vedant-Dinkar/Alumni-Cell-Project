@@ -1,0 +1,119 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+body,html{
+    overflow-x: hidden;
+
+}
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient( rgba(4,9,30,0.7), rgba(4,9,30,0.7)),url(./5.jpeg);
+    background-position: center;
+    background-size: cover;
+     position: relative; 
+}
+nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 25px;
+}
+nav a img{
+    height: 70px;
+    widows: 64px;
+}
+.navitems{
+    flex:1;
+    text-align: center;
+    /* text-align: right; */
+}
+.navitems ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 8px 25px;
+    /* padding: 8px 12px; */
+    position: relative;
+}
+
+.navitems ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+}
+.navitems ul li::after{
+    content:'';
+    width: 0%;
+    height:2px;
+    background:#f44336;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.navitems ul li:hover::after{
+    width: 100%;
+
+}
+nav .fa{
+    display: none;
+}
+
+ .btn{
+    float: right;
+    margin: 3px 6px;
+    padding: 2px 4px;
+    /* background-color: rgba(58, 52, 52,0.3); */
+    background-color:black;
+    /* color: #fff; */
+    color: #176B87;
+    font-weight: bolder;
+} 
+.btn:hover{
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    /* color: rgba(255,69,0,0.9); */
+}
+@media(max-width:700px){
+    .navitems ul li{
+        display: block;
+    }
+    .navitems{
+        position: absolute;
+        background: #f44336;
+        height:100vh;
+        width: 200px;
+        top: 0;
+        right:-200px;
+        text-align: left;
+        z-index: 2;
+        transition: 1s;
+    }
+    nav .fa{
+        display: block;
+        color: #fff;
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+    .navitems ul{
+        padding: 30px;
+    }
+
+    .btn{
+        position: absolute;
+        /* padding: 2px 4px; */
+        
+        
+    }
+    #btn1{
+        left:44%;
+        display: none;
+    }
+    #btn2{
+        left:56%;
+        display: none;
+    }
+}
