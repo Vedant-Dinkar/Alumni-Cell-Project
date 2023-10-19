@@ -1,0 +1,179 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Ubuntu";
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #e1e8ec !important;
+    height: 100vh;
+    overflow: auto;
+}
+
+.navbar {
+    height: 80px;
+    width: 100%;
+    background-color: #4c5175;
+    margin-bottom: 60%;
+    display: flex;
+}
+
+#logo {
+    margin-left: 1%;
+}
+
+#home {
+    margin-right: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid white;
+    outline: none;
+    background-color: #4c5175;
+}
+
+#home img {
+    filter: none;
+    margin: 11px 11px;
+    transition: filter 0.3s ease;
+}
+
+#home:hover img {
+    filter: invert();
+}
+
+#home:hover {
+    background-color: #444a74;
+}
+
+.center {
+    font-family: "Ubuntu", sans-serif;
+    position: absolute;
+    top: 460px;
+    left: 280px;
+    transform: translate(-50%, -50%);
+    width: 40%;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.05);
+}
+
+.center h1 {
+    text-align: center;
+    padding: 20px 0px;
+    border-bottom: 1px solid silver;
+}
+
+.center form {
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+
+form .txt_field {
+    position: relative;
+    border-bottom: 2px solid #adadad;
+    margin: 30px 0;
+}
+
+.txt_field input {
+    width: 100%;
+    padding: 0 5px;
+    height: 40px;
+    font-size: 16px;
+    border: none;
+    background: none;
+    outline: none;
+}
+
+.txt_field label {
+    z-index: 5;
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    color: #adadad;
+    transform: translateY(-50%);
+    font-size: 16px;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.txt_field span::before {
+    content: '';
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: #2691d9;
+    transition: 0s;
+}
+
+.txt_field input:focus ~ label,
+.txt_field input:valid ~ label {
+    color: white;
+    z-index: -5;
+}
+
+.txt_field input:focus ~ span::before,
+.txt_field input:valid ~ span::before {
+    width: 100%;
+}
+
+.pass {
+    margin: -5px 0 20px 5px;
+    color: #a6a6a6;
+    cursor: pointer;
+}
+
+.pass:hover {
+    text-decoration: underline;
+}
+
+input[type="submit"] {
+    width: 100%;
+    height: 50px;
+    border: 2px solid;
+    border-radius: 25px;
+    font-size: 18px;
+    color: #f8f8f8;
+    font-weight: 700;
+    cursor: pointer;
+    outline: none;
+}
+
+input[type="submit"] {
+    background: #4c5175;
+    transition: 0.3s;
+}
+
+input[type="submit"]:hover {
+    background: #2691d9;
+    transform: scale(1.02);
+    color: #f8f8f8;
+    transition: 0.3s;
+}
+
+.signup_link {
+    margin: 30px 0;
+    text-align: center;
+    font-size: 16px;
+    color: #666666;
+}
+
+.signup_link a {
+    color: #2691d9;
+    text-decoration: none;
+}
+
+.signup_link a:hover {
+    text-decoration: underline;
+}
+
+.mt {
+    height: 20px;
+    width: 100%;
+    background-color: #e1e8ec;
+}

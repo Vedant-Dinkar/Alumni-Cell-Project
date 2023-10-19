@@ -1,0 +1,38 @@
+
+{% extends "layout.html" %} 
+{% block title %}Gallery Extension{% endblock %} 
+{% block head%}
+<link rel="stylesheet" href="/static/styles/eventsext.css">{% endblock %}
+
+{% block content %}
+<form method="post">
+    <p>
+        <b><label for="event_name">Event Name</label></b>
+    </p>
+    <p>
+        <input type="text" name="event_name"
+            placeholder="Event Name" required></input>
+    </p>
+  
+    <p>
+        <b><label for="schedule">Schedule</label></b>
+    </p>
+    <p>
+        <input type="date" name="schedule" required>
+    </p>   
+  
+    <p>
+        <b><label for="description">Description</label></b>
+    </p>
+    <p>
+    <textarea name="description" id="" cols="30" rows="10" required></textarea>
+    </p>
+    <p>
+        <b><label for="image">Upload image</label></b>
+    </p>
+    <p>
+   <input type="file" name="image">
+    </p>
+    <button class="button-30" type="submit">Submit</button>
+  </form>
+{% endblock %}

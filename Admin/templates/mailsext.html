@@ -1,0 +1,30 @@
+
+{% extends "layout.html" %} 
+{% block head%}
+<link rel="stylesheet" href="/static/styles/mailsext.css">{% endblock %}
+{% block title %}Forums{% endblock %} 
+
+{% block content %}
+<h1>{{success}}</h1>
+<form method="post">
+   <div>
+
+       <label for="email">To:</label>
+       <input type="email" name="email" placeholder="Email" required id="">
+    </div> 
+
+    <div>
+        <label for="subject">Subject:</label>
+        <input type="text" name="subject" placeholder="Subject" required id="" >
+    </div>
+
+    <div>
+        <label for="message">Message:</label>
+        <textarea name="message" id="" cols="30" rows="10" required placeholder="message body"></textarea>
+    </div>
+    
+    <input type="submit" class="button-30" value="Send Message">
+
+
+</form>
+{% endblock %}

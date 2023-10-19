@@ -1,0 +1,33 @@
+{% extends "layout.html" %} 
+{% block head%}
+<link rel="stylesheet" href="/static/styles/home.css">{% endblock %}
+{% block title %}Forums ext{% endblock %} 
+
+{% block content %}
+<div class="FORUMS">
+    <form method="post">
+        <p>
+            <b><label for="alumni_name">Alumni name</label></b>
+        </p>
+        <p>
+            <input type="text" name="alumni_name"
+                placeholder="Enter Name" required></input>
+        </p>
+      
+        <p>
+            <b><label for="batch">Batch</label></b>
+        </p>
+        <p>
+            <input type="text" name="batch" required>
+        </p>   
+      
+        <p>
+            <b><label for="comment">Comment</label></b>
+        </p>
+        <p>
+        <textarea name="comment" id="" cols="30" rows="10" required></textarea>
+        </p>
+        
+        <button class="button-30" type="submit">Submit</button>
+</div>
+{% endblock %}

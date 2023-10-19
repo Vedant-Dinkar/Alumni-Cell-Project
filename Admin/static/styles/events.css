@@ -1,0 +1,56 @@
+.sidebar a:nth-child(2) button{    
+    background-color: #595959;
+    color: white;
+}
+small{
+    font-size: 17px;
+}
+.d-grid{
+    margin: 10px;
+}
+.button-30{margin: 30px;
+font-size: 30px;}
+
+.an_event{
+    margin: 20px;
+}
+
+.prev_events hr{
+   margin: auto;
+    width: 97%;
+}
+h2{
+    text-align: center;
+}
+
+.an_event{
+    padding: 0px 40px;
+    display: flex;
+    justify-content: space-between;
+}
+.prev_events_content{
+    height: 67vh;
+    overflow-y: scroll;
+overflow-x: hidden;
+
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }

@@ -1,0 +1,12 @@
+.sidebar a:nth-child(4) button{    
+    background-color: #595959;
+    color: white;
+}
+small{
+    font-size: 17px;
+}
+.d-grid{
+    margin: 10px;
+}
+.button-30{margin: 30px;
+font-size: 30px;}

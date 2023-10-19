@@ -1,0 +1,50 @@
+.sidebar a:nth-child(5) button{    
+    background-color: #595959;
+    color: white;
+}
+small{
+    font-size: 17px;
+}
+
+.button-30{margin: 30px;
+font-size: 30px;}
+
+.comments_container{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.a_comment{
+    margin: 20px;
+}
+
+.COMMENTS hr{
+   margin: auto;
+    width: 97%;
+}
+h2{
+    text-align: center;
+}
+
+
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }

@@ -1,0 +1,44 @@
+
+{% extends "layout.html" %} 
+{% block head%}
+<link rel="stylesheet" href="/static/styles/events.css">{% endblock %}
+{% block title %}Events{% endblock %} 
+
+{% block content %}
+<div class="EVENTS">
+
+  <div class="addeventsbtn">
+    
+    <a href="http://127.0.0.1:5000/eventsext"><button class="button-30" role="button">Add Event</button></a>
+  </div>
+  <hr>
+  <div class="prev_events">
+    <h2>Latest Events</h2>
+    <hr>
+    <div class="prev_events_content">
+<hr>
+      {% for event in events|reverse %}
+<div class="an_event">
+  <div class="event_details">
+
+    <h4>{{event['event_name']}}</h4>
+    <p><i>{{event['schedule']}}</i></p>
+    <p>{{event['description']}}</p>
+  </div>
+  <div class="btns">	            
+    <form method="POST" action="{{ url_for('delete', id=event['_id']) }}" >
+    <input type="submit" value="Delete"
+           onclick="return confirm('Are you sure you want to delete this entry?')">
+</form>
+    
+    <!-- <button>Delete</button> -->
+  </div>
+</div>
+<hr>
+  {% endfor %}
+    </div>
+    <hr>
+  </div>
+</div>
+
+{% endblock %}

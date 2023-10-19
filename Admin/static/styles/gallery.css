@@ -1,0 +1,21 @@
+.sidebar a:nth-child(3) button{    
+    background-color: #595959;
+    color: white;
+}
+
+
+
+.inline-block{
+    display: inline-block;
+}
+
+.scroll{
+    height: 100%;
+    width: 100%;
+    overflow-y: scroll;
+}
+
+form{
+    padding: 5%;
+}
+

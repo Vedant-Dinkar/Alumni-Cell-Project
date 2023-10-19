@@ -1,0 +1,297 @@
+*{
+    margin: 0;
+}
+  
+body{
+    background-image: url('./Group 46.png');
+}
+  
+.barnav{
+    font-family: 'Inter';
+    position: fixed;
+    height: 18%;
+    width: 100%;
+    background-color: #003153;
+}
+  
+.topds{
+    position: absolute;
+    background-color: #f5f5f5;
+    height: 36%;
+    width: 100%;
+    z-index: -1;
+}
+  
+#log{
+    position: relative;
+    top: 10%;
+    left: 5%;
+    height: 80%;
+}
+  
+#clg{
+    font-size: 20px;
+}
+  
+#nm{
+    position: absolute;
+    top: 10%;
+    left: 16%;
+}
+  
+.subbar ul li a{
+    text-align: center;
+    text-decoration: none;
+    color: white;
+}
+  
+.subbar ul{
+    width: 100%;
+}
+  
+.subbar ul li{
+    font-size: 12px;
+    text-align: center;
+    margin-right: 5%;
+    transform: translateY(-150%);
+}
+  
+.subbar ul li:nth-child(1){
+    margin-left: 40%;
+}
+  
+.subbar ul li:nth-child(1) a:hover{
+    color: cyan;
+}
+  
+.subbar ul li:nth-child(2) a:hover{
+    color: cyan;
+}
+  
+.subbar ul li:nth-child(3) a:hover{
+    color: cyan;
+}
+  
+.subbar ul li:nth-child(4) a:hover{
+    color: cyan;
+}
+  
+.search{
+    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    left: 25%;
+    margin-top: 10.5%;
+    width: 50%;
+    background-color: white;
+    height: 9.375%;
+    border-radius: 12px;
+    font-family: 'Ubuntu';
+    font-weight: 200;
+}
+  
+form .txt_field{
+    position: relative;
+    margin: 1.75% 0px;
+}
+  
+.txt_field input{
+    font-weight: 200;
+    width: 80%;
+    padding: 0 5px;
+    height: 100%;
+    left: 5%;
+    margin-left: 3%;
+    margin-top: 0%;
+    font-size: 32px;
+    border: none;
+    background: none;
+    outline: none;
+}
+  
+.txt_field label{
+    z-index: 5;
+    position: absolute;
+    top: 50%;
+    left: 4%;
+    transform: translate(-3%, -50%);
+    color: #adadad;
+    font-size: 32px;
+    pointer-events: none;
+    transition: 0.5s;
+}
+  
+.txt_field input:focus ~ label,
+.txt_field input:valid ~ label{
+    color: white;
+    z-index: -5;
+}
+  
+.txt_field input:focus ~ span::before,
+.txt_field input:valid ~ span::before{
+    width: 100%;
+}
+
+.search img {
+    position: absolute;
+    top: 50%;
+    padding-left: 10px;
+    right: 10px;
+    border-left: 2px solid #969696;
+    transform: translateY(-50%);
+    z-index: 5;
+    filter: brightness(150%); /* Adjust the brightness value as per your preference */
+}
+  
+.mac{
+    z-index: 0;
+    display: inline;
+    width: 100%;
+    height: 100%;
+}
+  
+.filter{
+    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    font-family: 'Ubuntu';
+    top: 35%;
+    background-color: white;
+    height: 62.5%;
+    width: 20%;
+    position: absolute;
+    left: 2%;
+    display: flex;
+    flex-direction: column;
+}
+  
+.filter span{
+    font-weight: 200;
+    font-size: 20px;
+    margin: 5%;
+}
+  
+.filter select{
+    border: none;
+    text-align: center;
+    color: white;
+    background-color: #003153;
+    border-radius: 10px;
+    margin: 5% 10%;
+    width: 80%;
+    height: 10%;
+}
+  
+.res{
+    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    border-radius: 12px;
+    font-family: 'Ubuntu';
+    top: 35%;
+    background-color: white;
+    height: 62.5%;
+    width: 50%;
+    position: absolute;
+    left: 25%;
+    display: flex;
+    flex-direction: column;
+}
+  
+.events{
+    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    border-radius: 12px;
+    font-family: 'Ubuntu';
+    top: 35%;
+    background-color: white;
+    height: 62.5%;
+    width: 20%;
+    position: absolute;
+    right: 2%;
+    display: flex;
+    flex-direction: column;
+}
+  
+.events span{
+    font-weight: 200;
+    font-size: 20px;
+    margin: 5%;
+}
+  
+.pics div{
+    position: relative;
+    height: 40%;
+    width: 100%;
+}
+  
+.pics div img{
+    width: 80%;
+    height: 100%;
+    border-radius: 6px;
+    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+}
+  
+.pics div span{
+    font-size: 20px;
+    text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.7);
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    color: rgb(255, 255, 255);
+    padding: 6px;
+    background: transparent;
+}
+ 
+.pics div button {
+    font-size: 12px;
+    text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.7);
+    position: absolute;
+    top: 5%;
+    right: 12%;
+    background-color: #003153;
+    color: rgb(255, 255, 255);
+    padding: 5px;
+    border-radius: 20px;
+    border: none;
+    z-index: 1;
+    cursor: pointer;
+}
+  
+.pics div button:hover {
+    background-color: #0072c4;
+}
+
+.res{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.res div{
+    position: relative;
+    background-color: #F1E9DF;
+    margin: 15px;
+    border-radius: 10px;
+    width: 150px;
+    height: 150px;
+    box-shadow: 0px 0px 10px 0 #E7E3DE;
+}
+
+.res div span{
+    position: absolute;
+    text-align: center;
+    top: 100px;
+}
+
+.res div img{
+    margin-top: 5px;
+}
+
+.res div p{
+    font-size: 8px;
+    font-weight: 200;
+    color: #969696;
+    text-align: left;
+    margin-left: 5px;
+}
+
+  

@@ -1,0 +1,790 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    overflow-x: hidden;
+    background-color: #F8F8F8;
+    /* height:200%;
+    width:200%;
+    transform-origin: top left;*/
+    /* zoom: 95%; */
+}
+
+#navbar {
+    /* display: flex; */
+    display: grid;
+    grid-template-areas:
+        'logo iit'
+        'logo root';
+}
+
+.root {
+     display: flex; 
+    /* margin-top: 51px; */
+     /* margin-right: 800px; */
+    /* margin-left: -800px; */
+    /* margin: 0px 25px; */
+     /* display: grid; 
+     border: 2px solid red;  
+     grid-template-columns: repeat(4, 1fr); 
+       grid-column-gap: 16rem;   */
+
+    grid-area: root;
+    width: 100%;
+    /* justify-content: center; */
+    /* align-items: center; */
+}
+
+#navbar ul li a {
+    font-size: 14px;
+    text-decoration: none;
+    /* padding: 100px; */
+        color: white; 
+    /* padding-bottom:25px ; */
+    /* margin-top: 10px; */
+    /* margin-bottom: 10px; */
+     margin: 0px 90px; 
+}
+
+#navbar ul li {
+    list-style: none;
+}
+
+#logo {
+    padding-left: 50px;
+    /* height: 150px; */
+    /* width: 150px; */
+    grid-area: logo;
+    position: relative;
+    top: 10px;
+}
+
+img {
+    height: 102px;
+    width: 84px;
+
+}
+
+.iit {
+    font-size: 20px;
+    display: inline-block;
+    grid-area: iit;
+    /* width: 533px; */
+     /* margin-right: 1500px; */
+    /* height: 37px; */
+     margin-top: 20px; 
+    color: black;
+     margin-left: -100px; 
+
+    /* margin: 10px; */
+    /* margin-left: -49px; */
+    /* border: 2px solid red;  */
+
+}
+.IITI{
+    display: none;
+}
+#menu{
+    display: none;
+}
+
+ #navbar::before {
+    content: "";
+    background-color: #4c5175;
+    position: absolute;
+    top: 55px;
+    width: 100%;
+    height: 40px;
+    z-index: -1;
+    overflow: hidden;
+} 
+
+/* .container::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 80px;
+    z-index: -1;
+    overflow: hidden;
+} */
+
+#navbar ul li a:hover {
+    color: aqua;
+}
+.btn1{
+    
+    /* display: block; */
+    float: right;
+     margin: 0px 10px; 
+    /* position: absolute;  */
+    position: relative;
+    bottom: 90px; 
+    font-size: 12px;
+    background-color: #bce7d9;
+    padding: 6px 6px;
+}
+.btn1:hover{
+    color: grey;
+}
+
+.lol {
+    overflow: hidden;
+}
+
+#gate{
+    width: 100%;
+    height: 500px;
+    position: relative;
+    bottom: 41px;
+    z-index: -5000;
+}
+
+
+
+
+/* director message  */
+.msgphoto{
+    display: flex;
+}
+ #dirimage{
+    width: 25%;
+     display: flex; 
+    align-items: center; 
+    justify-content: center;
+    /* height: 440px; */
+       /* border: 2px red solid;   */
+} 
+.msgphoto img{
+    width: 180px;
+     height: 125px; 
+     position: relative;
+     left: 110px;  
+    /* top: 110px; */
+}
+#msg{
+    width: 70%;
+    border: 10px solid #8CE7D9;
+    font-size: 22px;
+    background-color: #E1E8EC;
+    /* height: 400px; */
+      /* margin-left: 48px;   */
+    
+}
+#msg p{
+    
+    margin: 25px 40px;
+     margin-left: 55px; 
+    
+}
+
+.center{
+    text-align: center;
+}
+.message h3{
+    font-size: 40px;
+    /* margin-left: 350px; */
+    margin:20px 0px; 
+    margin-top: -10px;
+    text-align: center;
+}
+body{
+overflow-x: hidden;
+}
+*{
+margin: 0px;
+padding: 0px;
+}
+
+/* for alumni updates */
+.alumniupdates h2{
+margin: 30px 0px;
+font-size: 40px;
+}
+.updates{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+     flex-wrap:wrap ;
+}
+.box{
+    /* border: 2px solid red;  */
+    height:550px ; 
+    padding: 6px;
+    width: 29%;
+    margin: 3px 10px;
+    position: relative;
+    
+}
+.box h6{
+    font-size: 22px;
+    margin:15px 0px;
+}
+.box p{
+    font-size: 18px;
+}
+.read{
+    text-decoration: none;
+     margin: 50px 30px;  
+     display: inline;
+     /* width: 100%; */
+     /* border: 2px solid red; */
+     float: right;
+     position: absolute;
+     bottom: -57px;
+     right: 10px;
+    font-size: 22px;
+     color: black;
+}
+.READ{
+    width: 100%;
+    border: 2px red solid;
+}
+.read:hover{
+    background-color: #E1E8EC;
+}
+.pic{
+    width: 100%;
+    object-fit: cover;
+     height:300px; 
+}
+.horizontalline{
+    width: 100%;
+    height: 1px;
+    background-color:rgb(214, 199, 199);
+    margin: 50px 0px;;
+    /* border: 4px solid black; */
+    position:absolute;
+    bottom:-62px ;
+}
+
+/* awards section */
+.data{
+    display: flex;
+     flex-wrap: wrap; 
+    justify-content: center;
+    align-items: center;
+    /* width: 100%; */
+    background-color: #4c5175;
+    margin-top: 50px;
+    overflow-x: hidden;
+}
+/* .bgdata::before{
+    content: "";
+    position:absolute;
+    background-color: #4c5175;
+    width: 100%;
+    margin-top: 1000px;
+} */
+.info{
+    /* margin: 100px; */
+    /* margin: 75px 0px; */
+    width: 23%; 
+    font-size: 30px;
+     /* padding-left: 35px;  */
+     /* padding: 50px 75px; */
+     padding: 30px 75px;
+    color: white;
+    
+}
+
+/* gallery  */
+.gallerypic{
+    display: flex;
+     flex-wrap: wrap;
+     justify-content: center;
+     align-items: center; 
+
+}
+.square{
+    border: 2px solid red;
+    height:300px ;
+    padding: 14px 7px;
+    width: 23%;
+    margin: 15px 12px;
+}
+.gallery h2{
+    font-size: 32px;
+    margin: 40px 0px;
+}
+
+/* for navigation bar  */
+
+
+/* @media only screen and (min-width:1700px) and (max-width:2130px){
+    .root{
+         grid-column-gap: 20rem ; 
+    }}
+    @media only screen and (min-width:50px) and (max-width:900px){
+    #navbar:before{
+        height: 85px;
+    }
+    #navbar ul li a{
+        font-size: 20px;
+    }
+    #gate{
+        bottom: 31px;
+    }
+    }
+    @media only screen and (min-width:1450px) and (max-width:1700px){
+    .root{
+         grid-column-gap: 15rem ; 
+    }
+    
+    }
+    @media only screen and (min-width:1250px) and (max-width:1450px){
+    .root{
+         grid-column-gap: 10rem ; 
+    }
+    
+    } */
+    @media only screen and (min-width:950px) and (max-width:1215px){
+     /* .IITI{
+        display: block; font-size: 35px;
+        display: inline-block;
+        grid-area: iit;
+        height: 37px;
+        margin-top: 30px;
+        color: black;
+    }*/
+    .iit{
+    margin-left: 35px;
+    }  
+    #navbar ul li a{
+        margin: 0px 60px;
+    }
+    
+    }
+    @media only screen and (min-width:750px) and (max-width:950px){
+     /* .IITI{
+        display: block; font-size: 35px;
+        display: inline-block;
+        grid-area: iit;
+        height: 37px;
+        margin-top: 30px;
+        color: black;
+    }*/
+    .iit{
+     margin-left: 65px; 
+    } 
+    #navbar ul li a{
+        margin: 0px 60px;
+    }
+    
+    }
+
+    @media only screen and (min-width:520px) and (max-width:750px){
+        #navbar ul li a{
+            margin: 0px 30px;
+        }
+    }
+    @media only screen and (min-width:400px) and (max-width:520px){
+        #navbar ul li a{
+            margin: 0px 20px;
+        }
+        #logo{
+            padding-left: 10px;
+        }
+        nav div img{
+            height: 102px;
+            width: 62px;
+        }
+    }
+    @media only screen and (min-width:320px) and (max-width:400px){
+        #navbar ul li a{
+            margin: 0px -22px;
+            margin-left: 86px;
+        }
+        
+        #logo{
+            padding-left: 10px;
+        }
+        nav div img{
+            height: 102px;
+            width: 62px;
+        }
+        .item{
+            display: none;
+        }
+        #home{
+            display: inline-block;
+            
+        }
+        #menu{
+            display: inline-block;
+        }
+    }
+    @media only screen and (min-width:270px) and (max-width:320px){
+        #navbar ul li a{
+            margin: 0px 22px;
+            margin-left: 57px;
+        }
+        
+        #logo{
+            padding-left: 10px;
+        }
+        nav div img{
+            height: 102px;
+            width: 62px;
+        }
+        .item{
+            display: none;
+        }
+        #home{
+            display: inline-block;
+            
+        }
+        #menu{
+            display: inline-block;
+        }
+    }
+    
+
+    /* iit indore tag in different phone  */
+/* iphone se  */
+@media only screen and (min-width:360px) and (max-width:400px){
+    .iit{
+        display: none;
+    }
+    .IITI{
+            display: block; font-size: 15px;
+            display: inline-block;
+            grid-area: iit;
+            height: 37px;
+            margin-top: 30px;
+            margin-left: -45px;
+            color: black;
+    }
+    #navbar::before{
+        height: 47.5px;
+        top:55px;
+    }
+
+}
+@media only screen and (min-width:400px) and (max-width:500px){
+    .iit{
+        display: none;
+    }
+    .IITI{
+            display: block; font-size: 15px;
+            display: inline-block;
+            grid-area: iit;
+            height: 37px;
+            margin-top: 30px;
+            margin-left: -8px;
+            color: black;
+    }
+    #navbar::before{
+        height: 47.5px;
+        top:55px;
+    }
+
+}
+@media only screen and (min-width:500px) and (max-width:600px){
+    .iit{
+        display: none;
+    }
+    .IITI{
+            display: block; font-size: 15px;
+            display: inline-block;
+            grid-area: iit;
+            height: 37px;
+            margin-top: 30px;
+            margin-left: -49px;
+            color: black;
+    }
+    #navbar::before{
+        height: 47.5px;
+        top:55px;
+    }
+    nav div img {
+        width: 60px;
+    }
+    #logo{
+        padding-left: 10px;
+    }
+
+}
+@media only screen and (min-width:521px) and (max-width:600px){
+    .iit{
+        display: none;
+    }
+    .IITI{
+            display: block; font-size: 15px;
+            display: inline-block;
+            grid-area: iit;
+            height: 37px;
+            margin-top: 30px;
+            margin-left: -26px;
+            color: black;
+    }
+    #navbar::before{
+        height: 47.5px;
+        top:55px;
+    }
+    #logo{
+        padding-left: 10px;
+    }
+
+}
+@media only screen and (min-width:600px) and (max-width:900px){
+    .iit{
+        display: none;
+    }
+    .IITI{
+            display: block; font-size: 15px;
+            display: inline-block;
+            grid-area: iit;
+            height: 37px;
+            margin-top: 30px;
+            margin-left: -55px;
+            color: black;
+    }
+    #navbar::before{
+        height: 47.5px;
+        top:55px;
+    }
+    #logo{
+        padding-left: 10px;
+    }
+
+}
+@media only screen and (min-width:700px) and (max-width:900px){
+    .IITI{
+        margin-left: -105px;
+        font-size: 20px;
+    }
+}
+@media only screen and (min-width:750px) and (max-width:900px){
+    .IITI{
+        margin-left: -6px;
+        font-size: 20px;
+    }
+}
+@media only screen and (min-width:900px) and (max-width:1100px){
+    .iit{
+        margin-left: -58px;
+        font-size: 20px;
+    }
+}
+@media only screen and (min-width:1100px) and (max-width:1215px){
+    .iit{
+        margin-left: -156px;
+        font-size: 20px;
+    }
+}
+
+@media only screen and (min-width:310px) and (max-width:360px){
+    .iit{
+        display: none;
+    }
+    .IITI{
+            display: block; font-size: 15px;
+            display: inline-block;
+            grid-area: iit;
+            height: 37px;
+            margin-top: 30px;
+            margin-left: -27px;
+            color: black;
+    }
+    #navbar::before{
+        height: 45px;
+        top:55px;
+    }
+    #logo{
+        padding-left: 10px;
+    }
+
+
+}
+@media only screen and (min-width:321px) and (max-width:336px){
+    .IITI{  margin-left: -26px;
+}}
+@media only screen and (min-width:270px) and (max-width:310px){
+    .IITI{  
+        display: none;
+}
+.iit{
+    display: none;
+}
+
+nav ul li a{
+position: relative;
+bottom: 20px;
+margin: 0px 22px;
+margin-left:57px;
+}
+}
+@media only screen and (min-width:311px) and (max-width:320px){
+    nav ul li a{
+        position: relative;
+        bottom: 5px;
+}}
+@media only screen and (min-width:309px) and (max-width:310px){
+    nav ul li a{
+        position: relative;
+        bottom: 17px;
+}}
+@media only screen and (min-width:320px) and (max-width:340px){
+    nav ul li a{
+        position: relative;
+        bottom: 8px;
+}}
+@media only screen and (min-width:340px) and (max-width:400px){
+    nav ul li a{
+        position: relative;
+        bottom: 10px;
+}}
+
+ /* DIRECTOR MSG   */
+
+ @media only screen and (min-width:855px) and (max-width:1050px){
+    #msg p{
+        margin:25px 50px;
+        margin-left: 60px;
+    }
+    .msgphoto img{
+        left:90px;
+    }
+    
+    
+    } 
+ @media only screen and (min-width:700px) and (max-width:855px){
+    #msg p{
+        margin:25px 50px;
+        margin-left: 60px;
+    }
+    .msgphoto img{
+        left:70px;
+    }
+     
+    } 
+ @media only screen and (min-width:600px) and (max-width:700px){
+    #msg p{
+        margin:25px 50px;
+        margin-left: 60px;
+    }
+    .msgphoto img{
+        left:60px;
+    }
+     
+    } 
+ @media only screen and (min-width:600px) and (max-width:700px){
+    #msg p{
+        margin:25px 50px;
+        margin-left: 60px;
+    }
+    .msgphoto img{
+        left:60px;
+    }
+     
+    } 
+    @media only screen and (min-width:50px) and (max-width:600px){
+    .msgphoto{
+        flex-wrap: wrap;
+        justify-content: center;
+        border: 14px solid #8CE7D9;
+        background-color:  #E1E8EC;
+    }
+    .msgphoto img{
+        top: 10px;
+        left: 0px;
+        display: block;
+        height: 150px;
+        padding: 3px 0px;
+        margin: 0px auto;
+    }
+    #msg{
+        width: 90%;
+        border: 0;
+    }
+    
+    #dirimage{
+    width: 50%;
+    }
+    #msg p{
+    margin: 15px 25px;
+    font-size: 16px;
+    }
+    .message h3{
+    text-align: center;
+    margin-left: 0px;
+    font-size: 35px;
+    }
+    .message h3{
+        font-size: 30px;
+    }
+    }
+
+    /* ALUMNI UPDATES  */
+
+
+    @media only screen and (min-width:726px) and (max-width:876px){
+        
+        .box{
+         
+            width: 40%;
+            margin: 15px;
+        }
+
+    } 
+    @media only screen and (min-width:600px) and (max-width:726px){
+    
+        .box{
+         
+            width: 40%;
+            margin: 15px;
+            height: 600px;
+        }
+
+    } 
+    @media only screen and (min-width:400px) and (max-width:600px){
+        
+        .box{
+         
+            width: 90%;
+            margin: 15px;
+            height: 520px;
+        }
+
+    } 
+    @media only screen and (min-width:270px) and (max-width:400px){
+        
+        .box{
+         
+            width: 90%;
+            margin: 15px;
+            height: 500px;
+        }
+        #box2{
+            height:560px ;
+        }
+        .read{
+            font-size: 16px;
+        }
+        .box p{
+            font-size: 14px;
+        }
+        .box h6{
+            font-size: 18px;
+        }
+.alumniupdates h2{
+    font-size: 30px;
+}
+
+    } 
+
+   /* awards */
+@media only screen and (min-width:270px) and (max-width:500px){
+    .info{
+        font-size: 25px;
+        padding: 15px 75px;
+    }
+}
+@media only screen and (min-width:270px) and (max-width:310px){
+    .info{
+        font-size: 20px;
+        padding: 15px 75px;
+    }
+}

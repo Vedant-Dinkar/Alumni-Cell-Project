@@ -1,0 +1,28 @@
+.sidebar a:nth-child(1) button{    
+    background-color: #595959;
+    color: white;
+}
+.home{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.home div{
+    margin-top: 200px;
+    font-size: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+        height: 300px;
+    width: 400px;
+}
+.home div:hover{
+    transform: scale(1.1);
+}
+
+.button-30{
+    text-align: center;
+}

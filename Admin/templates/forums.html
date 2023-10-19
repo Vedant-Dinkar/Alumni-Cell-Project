@@ -1,0 +1,36 @@
+{% extends "layout.html" %} {% block head%}
+<link rel="stylesheet" href="/static/styles/forum.css" />{% endblock %} {% block
+title %}Forums{% endblock %} {% block content %}
+<div class="COMMENTS">
+  <div class="addeventsbtn">
+    <a href="http://127.0.0.1:5000/forumsext"
+      ><button class="button-30" role="button">Add Comment</button></a
+    >
+  </div>
+  <div class="comments_container">
+    {% for forum in forumss|reverse %}
+    <div class="a_comment">
+      <div class="comment_details">
+        <h4>{{forum['alumni_name']}}</h4>
+        <p><i>{{forum['batch']}}</i></p>
+        <p>{{forum['comment']}}</p>
+      </div>
+      <div class="btns">
+        <form
+          method="POST"
+          action="{{ url_for('delete_forum', id=forum['_id']) }}"
+        >
+          <input
+            type="submit"
+            value="Delete"
+            onclick="return confirm('Are you sure you want to delete this entry?')"
+          />
+        </form>
+      </div>
+
+      <!-- <button>Delete</button> -->
+    </div>
+  </div>
+  <hr />
+  {% endfor %} {% endblock %}
+</div>
